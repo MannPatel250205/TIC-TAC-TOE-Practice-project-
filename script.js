@@ -61,7 +61,7 @@ boxes.forEach((box) => {
         count++;
         let iswin = checkWinner();
         if (count == 9 && !iswin) {
-            resetGame();
+            showWinner("OOPs! Game was a Draw");
         }
     });
 });
@@ -74,7 +74,7 @@ const checkWinner = () => {
 
         if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
             if (pos1Val === pos2Val && pos2Val === pos3Val) {
-                showWinner(pos1Val);
+                showWinner("Winner is " + pos1Val);
                 return true;
             }
         }

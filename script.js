@@ -26,7 +26,7 @@ const resetGame = () => {
 };
 
 const showWinner = (winner) => {
-    msg.innerHTML = `Winner is ${winner}`;
+    msg.innerHTML = `${winner}`;
     msgc.classList.remove("hide");
     disableb();
 };
@@ -61,7 +61,7 @@ boxes.forEach((box) => {
         count++;
         let iswin = checkWinner();
         if (count == 9 && !iswin) {
-            showWinner("OOPs! Game was a Draw");
+            showWinner("OOPs! The game was a Draw");
         }
     });
 });
